@@ -10,8 +10,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site-2.webmanifest">
-    <!-- Reszta stylów i skryptów -->
-</head>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -46,48 +44,36 @@
         .label {
             font-size: 18px;
             color: #000000;
-            margin: 5px 0;
+            margin: 0px !important; /* Zmniejszono z 5px dla minimalnych odstępów */
             font-weight: bold;
         }
         #reparacje-amount {
             font-size: 6vw;
             font-weight: bold;
             color: #FF0000;
-            margin: 5px 0;
+            margin: 0px !important; /* Zmniejszono z 5px */
             line-height: 1.2;
             word-break: break-all;
         }
         #data-obecna {
             font-size: 16px;
             color: #000000;
-            margin: 5px 0;
+            margin: 0px !important; /* Zmniejszono z 5px */
         }
         .bottom-image {
             margin-top: 0px !important;
         }
         /* Media query dla iPhone’ów (ekrany < 400px) */
         @media (max-device-width: 400px) {
-            .top-image {
-                margin-bottom: 0px !important;
-            }
-            .content {
-                padding: 0px !important;
-            }
-            .bottom-image {
-                margin-top: 0px !important;
-            }
+            .top-image { margin-bottom: 0px !important; }
+            .content { padding: 0px !important; }
+            .bottom-image { margin-top: 0px !important; }
         }
         /* Media query dla iPadów i większych ekranów (> 768px) */
         @media (min-device-width: 768px) {
-            .top-image {
-                margin-bottom: 30px !important;
-            }
-            .content {
-                padding: 30px 15px !important;
-            }
-            .bottom-image {
-                margin-top: 30px !important;
-            }
+            .top-image { margin-bottom: 30px !important; }
+            .content { padding: 30px 15px !important; }
+            .bottom-image { margin-top: 30px !important; }
         }
     </style>
 </head>
