@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Licznik Reparacji</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+        p {
+            font-size: 16px;
+            color: #000000;
+            margin: 2px 0;
+        }
+        #reparacje-amount {
+            font-size: 40px;
+            font-weight: bold;
+            color: #FF0000;
+            margin: 2px 0;
+        }
+        img {
+            max-width: 40%;
+            height: auto;
+            margin: 2px auto;
+            display: block;
+        }
+        .content {
+            flex-grow: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 2px 0;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img src="obraz_gora.jpg" alt="Obraz górny">
+    <div class="content">
+        <p>Aktualna kwota reparacji:</p>
+        <div id="reparacje-amount">Obliczanie...</div>
+        <p id="data-obecna"></p>
+    </div>
+    <img src="obraz_dol.jpg" alt="Obraz dolny">
+    <script>
+        const KWOTA_BAZOWA = 6200000000000;
+        const STOPA_PROCENTOWA = 0.05;
+        const DATA_POCZATKOWA = new Date("2022-09-01");
+
+        function obliczOdsetki() {
+            const dataObecna = new Date();
+            const liczbaDni = Math.floor((dataObecna - DATA_POCZATKOWA) / (1000 * 60 * 60 * 24));
+            const odsetki = KWOTA_BAZOWA * STOPA_PROCENTOWA * (liczbaDni / 365.0);
+            const calkowitaKwota = KWOTA_BAZOWA + odsetki;
+            return Math.floor(calkowitaKwota);
+        }
+
+        function formatujKwote(kwota) {
+            return kwota.toLocaleString('pl-PL', { maximumFractionDigits: 0 }) + " PLN";
+        }
+
+        function aktualizujKwote() {
+            const kwota = obliczOdsetki();
+            document.getElementById("reparacje-amount").textContent = formatujKwote(kwota);
+            document.getElementById("data-obecna").textContent = "Stan na: " + new Date().toLocaleDateString('pl-PL');
+        }
+
+        setInterval(aktualizujKwote, 1000);
+        aktualizujKwote();
+    </script>
+</body>
+</html>
