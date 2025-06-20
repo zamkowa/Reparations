@@ -92,7 +92,7 @@
 <body>
     <img src="obraz_gora.jpg" alt="Obraz górny" class="top-image">
     <div class="content">
-        <p class="label">Aktualna kwota reparacji:</p>
+        <p class="label">The current amount of reparations:</p>
         <div id="reparacje-amount">Obliczanie...</div>
         <p id="data-obecna"></p>
     </div>
@@ -117,7 +117,7 @@
         function aktualizujKwote() {
             const kwota = obliczOdsetki();
             document.getElementById("reparacje-amount").textContent = formatujKwote(kwota);
-            document.getElementById("data-obecna").textContent = "Stan na: " + new Date().toLocaleDateString('pl-PL');
+            document.getElementById("data-obecna").textContent = "As of: " + new Date().toLocaleDateString('pl-PL');
         }
 
         setInterval(aktualizujKwote, 1000);
