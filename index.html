@@ -6,13 +6,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Linki do nowych ikon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-2/apple-touch-icon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/favicon-2/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-2/favicon-96x96.png">
-    <link rel="icon" type="image/x-icon" href="/favicon-2/favicon.ico">
-    <link rel="icon" type="image/svg+xml" href="/favicon-2/favicon.svg">
-    <link rel="manifest" href="/favicon-2/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site-2.webmanifest">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -47,34 +44,48 @@
         .label {
             font-size: 18px;
             color: #000000;
-            margin: 0px !important;
+            margin: 5px 0;
             font-weight: bold;
         }
         #reparacje-amount {
             font-size: 6vw;
             font-weight: bold;
             color: #FF0000;
-            margin: 0px !important;
+            margin: 5px 0;
             line-height: 1.2;
             word-break: break-all;
         }
         #data-obecna {
             font-size: 16px;
             color: #000000;
-            margin: 0px !important;
+            margin: 5px 0;
         }
         .bottom-image {
             margin-top: 0px !important;
         }
+        /* Media query dla iPhone’ów (ekrany < 400px) */
         @media (max-device-width: 400px) {
-            .top-image { margin-bottom: 0px !important; }
-            .content { padding: 0px !important; }
-            .bottom-image { margin-top: 0px !important; }
+            .top-image {
+                margin-bottom: 0px !important;
+            }
+            .content {
+                padding: 0px !important;
+            }
+            .bottom-image {
+                margin-top: 0px !important;
+            }
         }
+        /* Media query dla iPadów i większych ekranów (> 768px) */
         @media (min-device-width: 768px) {
-            .top-image { margin-bottom: 30px !important; }
-            .content { padding: 30px 15px !important; }
-            .bottom-image { margin-top: 30px !important; }
+            .top-image {
+                margin-bottom: 30px !important;
+            }
+            .content {
+                padding: 30px 15px !important;
+            }
+            .bottom-image {
+                margin-top: 30px !important;
+            }
         }
     </style>
 </head>
