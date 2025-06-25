@@ -1,6 +1,6 @@
 {
   "name": "Licznik Reparacji",
-  "short_name": "Reparacje",
+  "short_name": "Reparations",
   "description": "Licznik reparacji wojennych należnych Polsce",
   "start_url": "/index.html",
   "display": "standalone",
@@ -10,12 +10,12 @@
     {
       "src": "icon.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "obraz_gora/png"
     },
     {
       "src": "icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "obraz_gora/png"
     }
   ]
 }
