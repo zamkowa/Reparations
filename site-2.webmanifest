@@ -8,17 +8,17 @@
   "theme_color": "#f4f4f4",
   "icons": [
     {
-      "src": "/Reparations/apple-touch-icon.png",
+      "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "obraz_gora/png"
     },
     {
-      "src": "/Reparations/favicon-32x32.png",
+      "src": "/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/Reparations/favicon-16x16.png",
+      "src": "/favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     }
